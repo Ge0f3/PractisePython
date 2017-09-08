@@ -3,11 +3,14 @@ print("C'Mon lets play this Guessing Number game \n Instruction:The number will 
 Num=random.randint(0,9)
 guess=int(input("Enter your guess "))
 count=1
-print(Num)
 while(Num!=guess):
-	guess=int(input("It's not a correct guess one more time ? "))
+	guess=int(input("It's not a correct wanna try or exit ? "))
 	if(Num==guess):
 		break
-	else:
+	elif(Num>guess):
+		print("The number guessed is greather")
 		count=count+1
-print('Hurray you guessed it in {} guesses'.format(count))
+	else:
+		print("The numeber guessed is less")
+		count=count+1		
+print('Hurray {} it is !! and you guessed it in {} attempts'.format(Num,count))
