@@ -1,0 +1,8 @@
+#!/bin/bash
+# My first script
+
+echo "Hello World!"
+echo "The path is :" $PATH.directory
+date_formated=$(date +%m-%d-%y_Time_%H:%M:%S)
+date_formatted=$(date +%m_%d_%y-%H.%M.%S)
+echo "The formated date is " $date_formated
