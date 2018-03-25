@@ -2,6 +2,7 @@
 def fileoverlap():
 	file1 = '/Users/geofe/Documents/workspace/PractisePython/happynumbers.txt' 
 	file2 = '/Users/geofe/Documents/workspace/PractisePython/primenumbers.txt' 
+	file3 = '/Users/geofe/Documents/workspace/PractisePython/comman.txt' 
 	numbers = dict()
 	file1 = open(file1,'r')
 	file2=open(file2,'r')
@@ -19,6 +20,12 @@ def fileoverlap():
 			common.append(value[0])
 
 	print("\n \n The common values are {}".format(common))
+
+	file3 = open(file3,'w+')
+	file3.write("The common Numbers are : \n")
+	for num in common:
+		file3.write("{} \n".format(str(num)))
+
 
 def main():
 	print("<-------Ex 23 File overlap program ------->")
