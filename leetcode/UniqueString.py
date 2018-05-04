@@ -1,3 +1,5 @@
+import sys
+
 class StringOperations(object):
 	"""docstring for StringOperations"""
 	def __init__(self):
@@ -12,8 +14,6 @@ class StringOperations(object):
 				elif(self.str1[i]==self.str1[j]):
 					Match=False
 					return Match
-				# else:
-				# 	print("Comparing {} with {}".format(self.str1[i],self.str1[j]))
 		return Match
 	def NoOfSubString(self):
 
@@ -55,24 +55,45 @@ class StringOperations(object):
 		else:
 			print("{} is a  not substring of {}".format(str2,str1))
 
-strOp=StringOperations()
-# while True:
-# 	print("*********************************************************************************************")
-# 	print("Enter you otpion")
-# 	option = str(input("Enter your otpion\n "))
 
-strOp.getString()
-Match=strOp.UniqueString()
-if(Match):
-	print("The string is unique")
-else:
-	print("The string is not Unique")
-print("{} of substrings can be generated from the given string".format(strOp.NoOfSubString()))
-strOp.subStrings()
-strOp.permutation()
-string = str(input("Enter a string to replace all spaces: "))
-strOp.replaceSpace(string)
-strOp.check_substr()
+if __name__ == '__main__':
+	strOp=StringOperations()
+	while(True):
+		print("***************************************************************************************")
+		print("Type the action as follows")
+		print("1.To Check is the string is unique or not ")
+		print("2.To generated all possible substring from string")
+		print("3.To Replace all the spaces with %20")
+		print("4.To check for permutation of 2 string")
+		print("5.To check substrings")
+		print("6.To exit")
+		print("***************************************************************************************")
+
+		user_input = int(input("Enter your option: "))
+		if(user_input==1):
+			strOp.getString()
+			Match=strOp.UniqueString()
+			if(Match):
+				print("The {} is unique".format(strOp.str1))
+			else:
+				print("The {} is not Unique".format(strOp.str1))
+		elif(user_input==2):
+			print("{} of substrings can be generated from the given string".format(strOp.NoOfSubString()))
+			strOp.subStrings()
+		elif(user_input==4):
+			strOp.permutation()
+		elif(user_input==3):
+			string = str(input("Enter a string to replace all spaces: "))
+			strOp.replaceSpace(string)
+		elif(user_input==5):
+			strOp.check_substr()
+		elif(user_input==6):
+			print("Exiting !!!")
+			sys.exit(0)
+		else:
+			print("wrong choice Try again !")
+
+
 
 
 
