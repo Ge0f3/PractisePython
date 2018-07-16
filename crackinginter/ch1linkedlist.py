@@ -45,7 +45,6 @@ class linkedList():
 				temp=None
 				print("{} is deleted".format(data))
 				return True
-
 		prev = None
 		while(temp is not None and temp.data != data):
 			prev = temp
@@ -54,7 +53,6 @@ class linkedList():
 			print("The {} is not present in the node".format(data))
 			return 
 		# if temp is note none then it was present and got exited from the while loop 
-
 		prev.next = temp.next
 		temp = None
 		print("{} is deleted".format(data))
