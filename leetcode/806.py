@@ -8,19 +8,18 @@ def numberOfLines(widths, S):
         line_len=0
         for c in S:
             char_width= widths[ord(c)-97]
-            if(line_len<100):
-                line_len+=char_width
-            elif(line_len+char_width >100):
+            if(line_len+char_width >100):
                 line+=1
                 line_len=char_width
+            if(line_len<100):
+                line_len+=char_width
         if(line_len<100):
         	line+=1
         return [line,line_len]
 
 
-widths = [10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
-S = "abcdefghijklmnopqrstuvwxyz"
-
+widths = [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
+S = "bbbcccdddaaa"
 def main():
 	print(numberOfLines(widths,S))
 
