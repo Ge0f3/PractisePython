@@ -1,5 +1,6 @@
 
 import sys
+from collections import OrderedDict 
 roman = {
 	'I':1,
 	'V':5,
@@ -9,6 +10,21 @@ roman = {
 	'D':500,
 	'M':1000
 }
+
+roman = OrderedDict()
+roman[1000] = "M"
+roman[900] = "CM"
+roman[500] = "D"
+roman[400] = "CD"
+roman[100] = "C"
+roman[90] = "XC"
+roman[50] = "L"
+roman[40] = "XL"
+roman[10] = "X"
+roman[9] = "IX"
+roman[5] = "V"
+roman[4] = "IV"
+roman[1] = "I"
 def roman_to_integer(roman_letter):
 	integer=0
 	i=0
