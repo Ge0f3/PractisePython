@@ -13,7 +13,6 @@ def valid_parantheses(string):
                 return False
             else:
                 top_element = stack.pop()
-            
             if char != dic[top_element]:
                 return False
         else:
