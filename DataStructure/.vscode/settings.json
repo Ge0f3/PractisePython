@@ -1,3 +1,6 @@
 {
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": false,
+    "python.pythonPath": "/Users/geofe/anaconda3/bin/python",
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.enabled": true
 }
